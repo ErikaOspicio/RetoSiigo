@@ -1,4 +1,4 @@
-import {RickAndMortyCharacter} from "./Interfaces/interface";
+import {ICharacter} from "./Interfaces/interface";
  
 class RickAndMortyTs {
     constructor() {}
@@ -18,7 +18,7 @@ class RickAndMortyTs {
         try {
             const savedCharacters : (string | null) = localStorage.getItem('RickAndMortyApi');
             if (savedCharacters) {
-                const characters : RickAndMortyCharacter[] = JSON.parse(savedCharacters);
+                const characters : ICharacter[] = JSON.parse(savedCharacters);
                 console.log('Personajes Existentes:');
                 console.table(characters);
             } else {
@@ -29,10 +29,10 @@ class RickAndMortyTs {
         }
     }
  
-    public SaveNewCharacter(newCharacter: RickAndMortyCharacter): void {
+    public SaveNewCharacter(newCharacter: ICharacter): void {
         try {
             const savedCharacters : (string | null) = localStorage.getItem('RickAndMortyApi');
-            let characters: RickAndMortyCharacter[] = [];
+            let characters: ICharacter[] = [];
             if (savedCharacters) {
                 characters = JSON.parse(savedCharacters);
             }
@@ -52,7 +52,7 @@ const objRickAndMorty = new RickAndMortyTs();
     objRickAndMorty.GetAndSaveDataFromApi();
  
 //agrega un nuevo registro
-const newCharacter : RickAndMortyCharacter = {
+const newCharacter : ICharacter = {
     id : 100,
     name: 'Luisillo1',
     status:   'Dead',
