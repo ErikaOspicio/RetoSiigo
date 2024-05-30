@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>app.ts</title>
-    <script src="app.js"></script>
+    <title>Rick and Morty API</title>
 </head>
 <body>
-    
+    <h1>Rick and Morty API</h1>
+
+    <button id="fetch-data">Fetch and Save Data</button>
+    <button id="show-characters">Show All Characters</button>
+
+    <h2>Add New Character</h2>
+    <form id="add-character-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="status">Status:</label>
+        <input type="text" id="status" required>
+        <br>
+        <label for="species">Species:</label>
+        <input type="text" id="species" required>
+        <br>
+        <label for="type">Type:</label>
+        <input type="text" id="type">
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" required>
+        <br>
+        <label for="origin">Origin:</label>
+        <input type="text" id="origin" required>
+        <br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+        <br>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" required>
+        <br>
+        <button type="submit">Add Character</button>
+    </form>
+
+    <div id="characters-container"></div>
+
+    <script src="path/to/your/compiled-js-file.js"></script>
 </body>
 </html>
